@@ -1,5 +1,7 @@
 package com.hoomi.tuneinapi.categories.mvp;
 
+import android.text.TextUtils;
+
 import com.hoomi.tuneinapi.categories.model.BrowsableItem;
 import com.hoomi.tuneinapi.categories.service.TuneInRepository;
 
@@ -18,7 +20,12 @@ public class GenreDetailsPresenterImp implements GenreDetailsContract.Presenter,
     @Override
     public void init(String url) {
         view.showProgress();
-        tuneInRepository.requestGenreDetails(url, this);
+        if (!TextUtils.isEmpty(url)) {
+            tuneInRepository.requestGenreDetails(url, this);
+        } else {
+            view.showError("Url is empty");
+            view.hideProgress();
+        }
     }
 
 

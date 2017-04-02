@@ -16,7 +16,7 @@ public class GenreAdapter extends CategoriesAdapter {
     public void onClick(View v) {
         if (null != listener && recyclerView != null) {
             ViewHolder holder = (ViewHolder) recyclerView.getChildViewHolder(v);
-            listener.showGenre(holder.item);
+            listener.showCategory(holder.item);
         }
     }
 }

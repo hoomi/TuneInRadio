@@ -5,6 +5,4 @@ import com.hoomi.tuneinapi.categories.model.BrowsableItem;
 public interface NavigationHelper {
 
     void showCategory(BrowsableItem category);
-
-    void showGenre(BrowsableItem genre);
 }

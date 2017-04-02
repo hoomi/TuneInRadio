@@ -78,7 +78,7 @@ public class GenreDetailsAdapter extends RecyclerView.Adapter<GenreDetailsAdapte
     public void onClick(View v) {
         if (null != navigationHelper && recyclerView != null) {
             GenreDetailsAdapter.ViewHolder holder = (GenreDetailsAdapter.ViewHolder) recyclerView.getChildViewHolder(v);
-            navigationHelper.showGenre(holder.item);
+            navigationHelper.showCategory(holder.item);
         }
     }
 
